@@ -1,0 +1,47 @@
+@import "../../../node_modules/normalize.css/normalize.css";
+/* 公共变量 */
+:root {
+    /* 文字颜色 */
+    --color-text: #666;
+    /* 高亮文字颜色  */
+    --color-high-text: #ff5777;
+    --color-tint: #ff8198;
+    --color-background: #fff;
+    --font-size: 14px;
+    --line-height: 1.5;
+}
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;/*元素的边框和内边距都在设定的尺寸内*/
+}
+body{
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","微软雅黑",Arial,sans-serif;
+    user-select: none;/*禁止用户鼠标在页面上选中文字图片等*/
+    -webkit-tap-highlight-color: transparent;/* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+    background: var(--color-background);
+    width: 100vw; /*百分之百视口宽度*/
+}
+a{
+    color: var(--color-text);
+    text-decoration: none;
+}
+.clear-fix::after{
+    clear: both;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.clear-fix {
+    zoom: 1;
+}
+.left {
+    float:left;
+}
+.right {
+    float: right;
+}
